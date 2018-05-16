@@ -1,0 +1,24 @@
+<div class="container">
+  <div>
+    <h1><%= @flat.name %></h1>
+    <p><%= @flat.address %></p>
+  </div>
+
+  <div>
+    <h2>A bit more about this flat...</h2>
+    <p><%= @flat.description %></p>
+    <!-- map -->
+  </div>
+
+  <!-- book this place div -->
+
+  <div>
+    <h2>Details</h2>
+    <p><i class="fas fa-user-friends"></i><%= @flat.number_of_guests %><i class="fas fa-euro-sign"></i><%= @flat.price_per_night %>
+    </p>
+  </div>
+
+  <%= link_to "Back to list", root_path %>
+
+  <!-- social media div -->
+</div>

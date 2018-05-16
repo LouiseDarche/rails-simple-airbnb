@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>All our flats</h1>
+  <p>You searched for . We found 4 flats out of our 4 on our website.</p>
+
+  <div class="row">
+      <% @flats.each do |flat| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <li><%= link_to flat.name, flat_path(flat) %></li>
+            <li><%= flat.address %></li>
+            <li><%= flat.description %></li>
+            <li><%= flat.price_per_night %></li>
+            <li><%= flat.number_of_guests %></li>
+          </div>
+                    <%#= link_to "Delete", delete_flat_path(flat), method: :delete %>
+          <%= link_to "More info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to "Delete", flat_path(flat),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+
+        </div>
+      <% end %>
+  </div>
+</div>
